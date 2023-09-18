@@ -1,15 +1,19 @@
-export default function Cabecalho(){
-    return(
-    <>     
-    <header>
-        <h1>Vite+React coded by - rm552117</h1>
+import { Link } from "react-router-dom";
+import React from 'react';
+
+export default function Cabecalho() {
+  return (
+    <>
+      <header>
+        <h1>Vite+React coded by - PF0670</h1>
         <nav>
           <ul>
-            <li>Item-1</li>
-            <li>Item-2</li>
-            <li>Item-3</li>
+            <li><Link to="/">Home</Link> </li>
+            <li><Link to="/produtos">Produtos</Link> </li>
+            <li><Link to="/editar/produtos/">Home</Link> </li>
           </ul>
         </nav>
       </header>
-      </>)
+    </>
+  );
 }
