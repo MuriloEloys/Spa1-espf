@@ -1,0 +1,32 @@
+.tblEstilo{
+    border-collapse: collapse;
+    border: 2px solid black;
+
+    & th{
+        background-color: aquamarine;
+        border: 2px solid black;
+        text-align: center;
+    }
+
+    & .lineTbl{
+        background-color: lightblue;
+        & td{
+            border:2px solid black
+
+            &:first-child{
+                text-align:center
+            }
+            &:last-child{
+                text-align:center
+            }
+        }
+    }
+
+    & tfoot{
+        background-color: #ccc;
+        & td{
+            border: 2px solid black;
+            text-align: center;
+        }
+    }
+}
