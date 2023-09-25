@@ -4,7 +4,7 @@ import App from './App.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './routes/Home.jsx'
 import Produtos from './routes/Produto.jsx'
-import EditarProdutos from './routes/EditarProduto.jsx'
+import EditarProdutos from './routes/EditarProdutos.jsx'
 import Erro404 from './routes/Erro404.jsx'
 
 const router = createBrowserRouter([
