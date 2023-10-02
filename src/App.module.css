@@ -19,11 +19,11 @@
     & section{
         margin: 0 20%;
 
-        & p{
-            text-align: justify;
-            &:hover{
-                background-color: aquamarine;
-            }
+    }
+    & p{
+        text-align: justify;
+        &:hover{
+            background-color: aquamarine;
         }
     }
 }
