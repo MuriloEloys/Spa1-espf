@@ -2,9 +2,22 @@ import { Link } from "react-router-dom"
 import { ListaProduto } from "../components/ListaProdutos";
 import style from "./Produtos.module.css";
 import {AiTwotoneEdit as Editar} from "react-icons/ai"
+import { useEffect, useState } from "react";
 
 export default function Produtos() {
   document.title = "Lista de Produtos";
+  const[listaProdutosApi,setListaProdutosApi ] = useState([]);
+  useEffect(()=>{
+    //Realizando o REQUEST
+    fetch("http://localhost:5000/produtos")
+    //Recebendo o response e transformando em json
+    .then((response)=> response.json())
+    //Exibindo os dados no console
+    .then((response)=> setListaProdutosApi(response))
+    //Exibir caso ocorra alguim erro
+    .catch(error=>console.log(error));
+    
+  },[])
 
   return (
     <div>

@@ -1,4 +1,3 @@
-import React from 'react'
 import { useParams } from 'react-router-dom'
 import { ListaProduto } from '../components/ListaProdutos';
 
@@ -14,9 +13,9 @@ export default function ExcluirProdutos() {
 
   return (
     <div>
-        <button onClick={id=1}>Escolha o produto 1</button>
-        <button onClick={id=2}>Escolha o produto 2</button>
-        <button onClick={id=3}>Escolha o produto 3</button>
+        <button>Escolha o produto 1</button>
+        <button>Escolha o produto 2</button>
+        <button>Escolha o produto 3</button>
         <h1>Excluir Produtos</h1>
         <h2>Produto selecinado : {id}</h2>
         <h2>Poduto nome : {produtoRecuperadoPorId.nome}
@@ -28,7 +27,7 @@ export default function ExcluirProdutos() {
         <div>
           <form >
             <fieldset>
-                <button onClick={ListaProduto.pop=id}>Excluir Produtos</button>
+                <button>Excluir Produtos</button>
             </fieldset>
           </form>
         </div>

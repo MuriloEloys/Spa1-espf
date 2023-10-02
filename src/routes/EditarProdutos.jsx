@@ -1,4 +1,3 @@
-import React from 'react'
 import { useParams } from 'react-router-dom'
 import { ListaProduto } from '../components/ListaProdutos';
 
@@ -19,7 +18,7 @@ export default function EditarProdutos() {
         </h2>
         <h2>Poduto descrição : {produtoRecuperadoPorId.desc}
         </h2>
-        <h2>PRoduto preço : {produtoRecuperadoPorId.preco}
+        <h2>Produto preço : {produtoRecuperadoPorId.preco}
         </h2>
         <div>
           <form >
