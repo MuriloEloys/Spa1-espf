@@ -1,0 +1,20 @@
+.cabecalho{
+    background-color: #999;
+    font-size: 1.5rem;
+    font-weight: bold;
+    ul{
+        list-style: none;
+        li a{
+            text-decoration: none;
+            text-align: center;
+            display: block;
+            color: #fff;
+            padding: 8px 16px;
+            transition: ease-out 350ms;
+            &:hover{
+                background-color: rebeccapurple;
+            }
+
+        }
+    }
+}
