@@ -7,7 +7,7 @@ export default function Home() {
 
       <div>
         <figure>
-          <img src="/black-friday-2894130_1920.png" alt="Logo"/>
+          <img src="/imagem.png" alt="Logo"/>
           <figcaption></figcaption>
         </figure>
       </div>

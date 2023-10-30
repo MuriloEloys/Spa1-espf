@@ -3,5 +3,40 @@
         {"id":1, "nome":"Teclado","desc":"Teclado Mecânico 102 Teclas.","preco":220},
         {"id":2, "nome":"Mouse", "desc":"Mouse sem fio.", "preco":56.98},
         {"id":3, "nome":"Monitor", "desc":"32 75Hz.", "preco":2500}
+    ],
+
+    "usuarios":[[
+            {
+                "id": 1,
+                "email": "@icloud.com",
+                "name": "Victoria Nielsen",
+                "senha": "mollis."
+            },
+            {
+                "id": 2,
+                "email": "@outlook.net",
+                "name": "Lev Peters",
+                "senha": "blandit"
+            },
+            {
+                "id": 3,
+                "email": "@hotmail.couk",
+                "name": "Petra Larsen",
+                "senha": "sagittis"
+            },
+            {
+                "id": 4,
+                "email": "@hotmail.org",
+                "name": "Whoopi Wallace",
+                "senha": "arcu"
+            },
+            {
+                "id": 5,
+                "email": "@hotmail.edu",
+                "name": "Vaughan Boone",
+                "senha": "et,"
+            }
+        ]
     ]
 }
+
