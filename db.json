@@ -5,38 +5,37 @@
         {"id":3, "nome":"Monitor", "desc":"32 75Hz.", "preco":2500}
     ],
 
-    "usuarios":[[
+    "usuarios":[
             {
                 "id": 1,
-                "email": "@icloud.com",
+                "email": "vict.Nie@icloud.com",
                 "name": "Victoria Nielsen",
                 "senha": "mollis."
             },
             {
                 "id": 2,
-                "email": "@outlook.net",
+                "email": "levpet@outlook.net",
                 "name": "Lev Peters",
                 "senha": "blandit"
             },
             {
                 "id": 3,
-                "email": "@hotmail.couk",
+                "email": "Pet.La@hotmail.couk",
                 "name": "Petra Larsen",
                 "senha": "sagittis"
             },
             {
                 "id": 4,
-                "email": "@hotmail.org",
+                "email": "wall@hotmail.org",
                 "name": "Whoopi Wallace",
-                "senha": "arcu"
+                "senha": "id"
             },
             {
                 "id": 5,
-                "email": "@hotmail.edu",
+                "email": "vaugh@hotmail.edu",
                 "name": "Vaughan Boone",
                 "senha": "et,"
             }
         ]
-    ]
 }
 

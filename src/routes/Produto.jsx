@@ -18,7 +18,7 @@ export default function Produtos() {
     .catch(error=>console.log(error));
     
   },[])
-
+  if(sessionStorage.getItem("token-user")){
   return (
     <div>
       <h1>Produtos</h1>
@@ -55,4 +55,6 @@ export default function Produtos() {
       </table>
     </div>
   );
-}
+}else{
+  window.location = "/login";
+}}

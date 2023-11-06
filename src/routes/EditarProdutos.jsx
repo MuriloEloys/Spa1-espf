@@ -32,7 +32,7 @@ export default function EditarProdutos() {
       }
 
     }
-
+  if(sessionStorage.getItem("token-user")){
   return (
     <div>
         <h1>Editar Produtos</h1>
@@ -61,60 +61,6 @@ export default function EditarProdutos() {
 
     </div>
   )
-}
-
-
-// MEU CÓDIGO !!!!!! TESTAR  ERRO NOVAMENTE
-
-
-
-// import { useParams } from 'react-router-dom'
-// import { useEffect, useState } from 'react';
-
-// export default function EditarProdutos() {
-
-//     const {id} = useParams();
-
-//     document.title = "Editar Produtos " + id;
-
-//     const [produto, setProduto] = useState({})
-
-//     useEffect(()=>{
-
-//       fetch(`http://localhost:5173/produtos${id}`)
-//       .then ((response)=> response.json())
-//       .then ((response)=> setProduto(response))
-//       .catch(error=> console.log(error));
-
-//     },[id]);
-//   return (
-//     <div>
-//         <h1>Editar Produtos</h1>
-//         <div>
-//           <form >
-//             <fieldset>
-//               <legend>Produto Selecionado</legend>
-//               <div>
-//                 <label htmlFor="">Nome :</label>
-//                 <input type="text" name='nome' placeholder='Digite o nome do Produto.' value={produto.nome} onChange={(e)=> setProduto(e.target.value)}/>
-//               </div>
-              
-//               <div>
-//                 <label htmlFor="">Descrição :</label>
-//                 <input type="text" name='desc' placeholder='Digite a descrição do produto.' value={produto.desc}/>
-//               </div>
-//               <div>
-//                 <label htmlFor="">Preço :</label>
-//                 <input type="text" name='preco' placeholder='Digite o preço do produto.' value={produto.preco} />
-//               </div>
-//               <div>
-//                 <button>EDITAR</button>
-//               </div>
-
-//             </fieldset>
-//           </form>
-//         </div>
-        
-//     </div>
-//   )
-// }
+}else{
+  window.location = "/login"
+}}

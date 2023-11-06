@@ -1,5 +1,9 @@
 
+
 export default function Home() {
+  document.tile = "HOME"
+
+  if(sessionStorage.getItem("token-user")){
   return (
     <div>
       <h1>PRI</h1>
@@ -14,5 +18,8 @@ export default function Home() {
 
 
     </div>
-  )
+  )}
+  else{
+    window.location = "/login";
+  }
 }
