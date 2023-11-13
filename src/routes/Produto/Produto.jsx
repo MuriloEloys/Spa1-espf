@@ -1,27 +1,37 @@
-import { Link } from "react-router-dom"
-import { ListaProduto } from "../components/ListaProdutos";
+import { Link } from "react-router-dom";
 import style from "./Produtos.module.css";
 import {AiTwotoneEdit as Editar} from "react-icons/ai"
 import { useEffect, useState } from "react";
+import ModalAction from "../../components/Modal Action/ModalAction.jsx"
 
 export default function Produtos() {
   document.title = "Lista de Produtos";
-  const[listaProdutosApi,setListaProdutosApi ] = useState([]);
+
+  const[listaProdutosApi,setListaProdutosApi] = useState([]);
+
   useEffect(()=>{
-    //Realizando o REQUEST
+
+    //Realizando o Request
     fetch("http://localhost:5000/produtos")
-    //Recebendo o response e transformando em json
+    //Recebendo o Response e transformando em json
     .then((response)=> response.json())
     //Exibindo os dados no console
     .then((response)=> setListaProdutosApi(response))
-    //Exibir caso ocorra alguim erro
-    .catch(error=>console.log(error));
-    
-  },[])
+    //Exibindo caso ocorra algum erro.
+    .catch(error=> console.log(error));
+
+  },[]);
+  
+  const [open, setOpen] = useState(false);
+
   if(sessionStorage.getItem("token-user")){
   return (
     <div>
       <h1>Produtos</h1>
+
+      <ModalAction open={open} setClose={setOpen}/>
+
+      <button className={style.btnInsProd} onClick={()=> setOpen(true)}>INSERIR PRODUTO</button>
 
       <table className={style.tblEstilo}>
         <thead>
@@ -35,26 +45,28 @@ export default function Produtos() {
         </thead>
 
         <tbody>
-          {ListaProduto.map((item, indice) => (
+          {listaProdutosApi.map((item, indice) => (
             <tr key={indice} className={style.lineTbl}>
               <td>{item.id}</td>
               <td>{item.nome}</td>
               <td>{item.desc}</td>
               <td>{item.preco}</td>
-              <td><Link to={`/editar/produtos/${item.id}`}><Editar/></Link> </td>
+              <td><Link to={`/editar/produtos/${item.id}`}> <Editar/> </Link> </td>
             </tr>
           ))}
         </tbody>
         <tfoot>
           <tr>
             <td colSpan={5}>
-              PRODUTOS INFORMÁTICOS - QTD = {ListaProduto.length}
+              PRODUTOS INFORMÁTICOS - QTD = {listaProdutosApi.length}
             </td>
           </tr>
         </tfoot>
       </table>
     </div>
   );
-}else{
-  window.location = "/login";
-}}
+          }else{
+            window.location = "/login";
+            
+          }
+}
